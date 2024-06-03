@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'unleveredpurple': '#140b2d',
+        'unleveredpurple': '#070415',
       },
     },
   },
