@@ -4,9 +4,10 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
-    colors: {
-      'mypurple': '#140b2d',
+    extend: {
+      colors: {
+        'unleveredpurple': '#140b2d',
+      },
     },
   },
   plugins: [],
