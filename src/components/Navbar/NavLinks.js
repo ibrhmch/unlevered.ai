@@ -1,11 +1,11 @@
 function NavLinks() {
     return (
-        <div className="bg-gray-700 text-white px-4 py-2">
-            <div className="flex space-x-4">
-                <span to="/" className="hover:text-gray-300">Home</span>
-                <span to="/stocks" className="hover:text-gray-300">Stocks</span>
-                <span to="/about" className="hover:text-gray-300">About</span>
-                <span to="/contact" className="hover:text-gray-300">Contact</span>
+        <div className="bg-indigo-950 text-white font-light px-4 py-2">
+            <div className="flex space-x-4 m-2">
+                <button className="hover:text-gray-300">Home</button>
+                <button className="hover:text-gray-300">Stocks</button>
+                <button className="hover:text-gray-300">About</button>
+                <button className="hover:text-gray-300">Contact</button>
             </div>
         </div>
     );
