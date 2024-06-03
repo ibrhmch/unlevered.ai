@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <div className="App" style={{ backgroundColor: 'rgb(31 41 55)', minHeight: '100vh', color: 'white' }}>
+    <div className="App" style={{ minHeight: '100vh', color: 'white' }}>
       <Navbar />
       <HomePage />
     </div>
