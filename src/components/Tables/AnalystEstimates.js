@@ -4,6 +4,9 @@ function AnalystEstimates({ stockAnalystEstimates }) {
 
     return (
         <div className="p-1 bg-gray-800 border rounded-md border-transparent">
+            <div className="flex items-center justify-center border-b border-gray-700">
+                <h2 className="text-md font-medium text-white mb-2">Analyst Estimates</h2>
+            </div>
             <table className="text-xs">
                 <thead>
                     <tr>
