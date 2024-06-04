@@ -29,8 +29,9 @@ function Footer() {
                     )}
                 </div>
             </div>
-            <div className="flex justify-center pb-20 pt-8 font-extralight text-unlevered-textpurple">
-                <p className="text-xs">2024 &copy; Unlevered AI</p>
+            <div className="flex flex-col justify-center items-center pb-20 pt-8 font-extralight text-unlevered-textpurple">
+                <img src="https://unlevered.ai/wp-content/uploads/2024/04/Unlevered-Logo-with-text-1-1-e1712565469188.png" alt="Company Logo" className="h-6 my-2" />
+                <p className="text-xs">2024 &copy; All Rights Reserved</p>
             </div>
         </div>
     );
