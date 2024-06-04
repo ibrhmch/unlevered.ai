@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
 import HomePage from './pages/HomePage';
+import NavBar from './components/nav/NavBar';
 
 function App() {
   return (
     <div className="App" style={{ minHeight: '100vh', color: 'white' }}>
-      <Navbar />
+      <NavBar />
       <HomePage />
     </div>
   );
