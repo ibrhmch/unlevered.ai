@@ -1,6 +1,6 @@
 function StatsTable({ stockFinacialReports }) {
-    const keyStyling = 'px-2 py-2 border border-gray-800';
-    const valueStyling = 'font-thin italic px-2 border py-2 border-gray-800';
+    const keyStyling = 'px-2 p-1';
+    const valueStyling = 'font-thin italic px-2 py-1';
 
     const renderTableRows = () => {
         const entries = Object.entries(stockFinacialReports);
@@ -8,7 +8,7 @@ function StatsTable({ stockFinacialReports }) {
 
         for (let i = 0; i < entries.length; i += 6) {
             rows.push(
-                <tr key={i}>
+                <tr key={i} className="border-y border-gray-700">
                     {entries[i] && (
                         <>
                             <td className={`${keyStyling}`}>{entries[i][0]}</td>
@@ -53,11 +53,13 @@ function StatsTable({ stockFinacialReports }) {
     };
 
     return (
-        <table className="min-w-full bg-graph-background text-xs">
-            <tbody className="text-xs">
-                {renderTableRows()}
-            </tbody>
-        </table>
+        <div className="p-1 bg-gray-800 border rounded-md border-transparent">
+            <table className="min-w-full text-xs">
+                <tbody className="text-xs">
+                    {renderTableRows()}
+                </tbody>
+            </table>
+        </div>
     );
 }
 
