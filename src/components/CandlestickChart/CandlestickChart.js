@@ -50,6 +50,9 @@ function CandlestickChart({ stockFrequency, stockName }) {
                 enabled: true
             },
             labels: {
+                formatter: function (value) {
+                    return Math.round(value); // Format y-axis labels as integers
+                },
                 style: {
                     colors: '#f0f0f0' // Light text color for y-axis labels
                 }
