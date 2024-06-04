@@ -3,7 +3,7 @@ import axios from "axios";
 import StockOverview from "../components/StockOverview/StockOverview";
 import CandlestickChart from "../components/CandlestickChart/CandlestickChart";
 import FrequencyButtons from "../components/CandlestickChart/FrequencyButtons";
-import StatsTable from "../components/StatsTables/StatsTable";
+import StatsTable from "../components/Tables/StatsTable";
 
 
 function HomePage() {
