@@ -36,7 +36,7 @@ function Navbar() {
   }, [menuRef]);
 
   return (
-    <nav className="bg-unleveredpurple fixed w-full z-20 top-0 left-0 border-b border-violet-950">
+    <nav className="bg-unleveredpurple fixed w-full z-20 top-0 left-0 border-b border-gray-800">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3 font-extralight">
         <NavBarLogo />
 
