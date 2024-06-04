@@ -3,7 +3,7 @@ import axios from "axios";
 import StockOverview from "../components/StockOverview/StockOverview";
 import CandlestickChart from "../components/CandlestickChart/CandlestickChart";
 import FrequencyButtons from "../components/CandlestickChart/FrequencyButtons";
-import StatsTable from "../components/Tables/StatsTable";
+import KeyRatios from "../components/Tables/KeyRatios";
 
 
 function HomePage() {
@@ -63,7 +63,7 @@ function HomePage() {
             </div>
             <div className="pt-2 pb-2 flex justify-center text-sm">
                 <div className="w-full lg:w-4/6 flex justify-center items-center">
-                    <StatsTable stockFinacialReports={stockFinacialReports} />
+                    <KeyRatios stockFinacialReports={stockFinacialReports} />
                 </div>
             </div>
             <div className="pt-2 pb-2 flex justify-center text-sm bg-slate-500">

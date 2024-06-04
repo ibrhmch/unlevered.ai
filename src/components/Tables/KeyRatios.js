@@ -1,4 +1,4 @@
-function StatsTable({ stockFinacialReports }) {
+function KeyRatios({ stockFinacialReports }) {
     const keyStyling = 'px-2 p-1';
     const valueStyling = 'font-thin italic px-2 py-1';
 
@@ -63,4 +63,4 @@ function StatsTable({ stockFinacialReports }) {
     );
 }
 
-export default StatsTable;
+export default KeyRatios;
