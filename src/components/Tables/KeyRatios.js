@@ -1,9 +1,9 @@
-function KeyRatios({ stockFinacialReports }) {
+function KeyRatios({ stockKeyRatios }) {
     const keyStyling = 'px-2 p-1';
     const valueStyling = 'font-thin italic px-2 py-1';
 
     const renderTableRows = () => {
-        const entries = Object.entries(stockFinacialReports);
+        const entries = Object.entries(stockKeyRatios);
         const rows = [];
 
         for (let i = 0; i < entries.length; i += 6) {

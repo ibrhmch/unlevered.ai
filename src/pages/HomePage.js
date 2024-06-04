@@ -4,13 +4,13 @@ import StockOverview from "../components/StockOverview/StockOverview";
 import CandlestickChart from "../components/CandlestickChart/CandlestickChart";
 import FrequencyButtons from "../components/CandlestickChart/FrequencyButtons";
 import KeyRatios from "../components/Tables/KeyRatios";
-
+import AnalystEstimates from "../components/Tables/AnalystEstimates";
 
 function HomePage() {
     const [stockFrequency, setStockFrequency] = useState('WEEKLY');
     const [stockName, setStockName] = useState('AAPL');
-    const [stockFinacialReports, setStockFinancialReports] = useState({});
-    const [stockForecasts, setStockForecasts] = useState([]);
+    const [stockKeyRatios, setStockKeyRatios] = useState({});
+    const [stockAnalystEstimates, setstockAnalystEstimates] = useState([]);
 
     const changeStockFrequency = (frequency) => {
         setStockFrequency(frequency);
@@ -19,7 +19,7 @@ function HomePage() {
     useEffect(() => {
         axios.get('http://localhost:3001/financials')
             .then((response) => {
-                setStockFinancialReports(response.data);
+                setStockKeyRatios(response.data);
             })
             .catch((error) => {
                 console.error('Error fetching data: ', error);
@@ -27,7 +27,7 @@ function HomePage() {
 
         axios.get('http://localhost:3001/forecasts')
             .then((response) => {
-                setStockForecasts(response.data);
+                setstockAnalystEstimates(response.data);
             })
             .catch((error) => {
                 console.error('Error fetching data: ', error);
@@ -63,12 +63,12 @@ function HomePage() {
             </div>
             <div className="pt-2 pb-2 flex justify-center text-sm">
                 <div className="w-full lg:w-4/6 flex justify-center items-center">
-                    <KeyRatios stockFinacialReports={stockFinacialReports} />
+                    <KeyRatios stockKeyRatios={stockKeyRatios} />
                 </div>
             </div>
-            <div className="pt-2 pb-2 flex justify-center text-sm bg-slate-500">
-                <div className="bg-green-500 w-full lg:w-4/6 flex justify-center items-center">
-                    <pre>{JSON.stringify(stockForecasts, null, 2)}</pre>
+            <div className="pt-2 pb-2 flex justify-center text-sm">
+                <div className="w-full lg:w-4/6 flex justify-center items-center">
+                    <AnalystEstimates />
                 </div>
             </div>
         </div>
