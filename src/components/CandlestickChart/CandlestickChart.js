@@ -27,8 +27,8 @@ function CandlestickChart({ stockFrequency, stockName }) {
 
     const options = {
         chart: {
-            background: '#1e1e1e', // Dark background color
-            foreColor: '#f0f0f0' // Light text color
+            background: '#353945', // Dark background color
+            foreColor: '#f0f0f0', // Light text color
         },
         title: {
             text: `${stockName} Stock Price`,
