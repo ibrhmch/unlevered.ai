@@ -68,7 +68,7 @@ function HomePage() {
             </div>
             <div className="pt-2 pb-2 flex justify-center text-sm">
                 <div className="w-full lg:w-4/6 flex justify-center items-center">
-                    <AnalystEstimates />
+                    <AnalystEstimates stockAnalystEstimates={stockAnalystEstimates} />
                 </div>
             </div>
         </div>
