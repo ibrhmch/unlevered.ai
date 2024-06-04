@@ -20,7 +20,7 @@ function HomePage() {
     };
 
     return (
-        <div className="App min-h-screen text-gray-200 mt-20">
+        <div className="App min-h-screen text-gray-200 mt-20 w-full">
             <StockOverview
                 name={dummyStockData.name}
                 price={dummyStockData.price}
