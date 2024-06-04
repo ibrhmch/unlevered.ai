@@ -65,6 +65,36 @@ function CandlestickChart({ stockFrequency, stockName }) {
                     downward: '#ff5959' // Red for downward candles
                 }
             }
+        },
+        tooltip: {
+            theme: 'dark', // Dark theme for tooltip
+            style: {
+                fontSize: '12px',
+                fontFamily: undefined
+            },
+            onDatasetHover: {
+                highlightDataSeries: true,
+            },
+            y: {
+                formatter: undefined,
+                title: {
+                    formatter: (seriesName) => seriesName,
+                    style: {
+                        color: '#f0f0f0' // Light text color for tooltip title
+                    }
+                }
+            },
+            x: {
+                formatter: (value, { series, seriesIndex, dataPointIndex, w }) => {
+                    return new Date(value).toDateString(); // Format date if needed
+                },
+                style: {
+                    color: '#f0f0f0' // Light text color for tooltip x-axis
+                }
+            },
+            marker: {
+                show: true,
+            },
         }
     };
 
@@ -73,7 +103,7 @@ function CandlestickChart({ stockFrequency, stockName }) {
     }];
 
     return (
-        <div id="chart" className='font-extralight bg-slate-100 w-3/4'>
+        <div id="chart" className='font-extralight p-4 w-full md:w-10/12'>
             <Chart options={options} series={series} type="candlestick" height={450} />
         </div>
     );
