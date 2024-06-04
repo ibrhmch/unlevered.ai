@@ -11,6 +11,7 @@ module.exports = {
         'unlevered-textpurple': '#948CF2',
         'unlevered-green': '#00FFC0',
         'unlevered-red': '#ff5959',
+        'graph-background': '#353945',
       },
     },
   },

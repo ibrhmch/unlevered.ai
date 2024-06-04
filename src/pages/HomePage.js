@@ -27,29 +27,31 @@ function HomePage() {
                 change={dummyStockData.change}
                 changePercent={dummyStockData.changePercent}
             />
-            <div className="pt-2 pb-2 text-sm">
-                <div className="flex justify-center mb-6">
-                    <button
-                        className={`hover:bg-gray-800 py-2 px-4 mx-2 rounded-md ${stockFrequency === 'DAILY' ? 'bg-gray-900 border border-unlevered-textpurple' : ''}`}
-                        onClick={() => changeStockFrequency('DAILY')}
-                    >
-                        Daily
-                    </button>
-                    <button
-                        className={`hover:bg-gray-800 py-2 px-4 mx-2 rounded-md ${stockFrequency === 'WEEKLY' ? 'bg-gray-900 border border-unlevered-textpurple' : ''}`}
-                        onClick={() => changeStockFrequency('WEEKLY')}
-                    >
-                        Weekly
-                    </button>
-                    <button
-                        className={`hover:bg-gray-800 py-2 px-4 mx-2 rounded-md ${stockFrequency === 'MONTHLY' ? 'bg-gray-900 border border-unlevered-textpurple' : ''}`}
-                        onClick={() => changeStockFrequency('MONTHLY')}
-                    >
-                        Monthly
-                    </button>
-                </div>
-                <div className="flex justify-center max-w-full">
-                    <CandlestickChart stockFrequency={stockFrequency} stockName={stockName} />
+            <div className="pt-2 pb-2 flex justify-center text-sm">
+                <div className="flex flex-col py-4 w-full mx-1 lg:w-4/6 rounded-md border border-gray-800">
+                    <div className="flex justify-center mb-6">
+                        <button
+                            className={`hover:bg-gray-800 py-2 px-4 mx-2 rounded-md ${stockFrequency === 'DAILY' ? 'bg-gray-900 border border-unlevered-textpurple' : ''}`}
+                            onClick={() => changeStockFrequency('DAILY')}
+                        >
+                            Daily
+                        </button>
+                        <button
+                            className={`hover:bg-gray-800 py-2 px-4 mx-2 rounded-md ${stockFrequency === 'WEEKLY' ? 'bg-gray-900 border border-unlevered-textpurple' : ''}`}
+                            onClick={() => changeStockFrequency('WEEKLY')}
+                        >
+                            Weekly
+                        </button>
+                        <button
+                            className={`hover:bg-gray-800 py-2 px-4 mx-2 rounded-md ${stockFrequency === 'MONTHLY' ? 'bg-gray-900 border border-unlevered-textpurple' : ''}`}
+                            onClick={() => changeStockFrequency('MONTHLY')}
+                        >
+                            Monthly
+                        </button>
+                    </div>
+                    <div className="flex justify-center">
+                        <CandlestickChart stockFrequency={stockFrequency} stockName={stockName} />
+                    </div>
                 </div>
             </div>
         </div>
