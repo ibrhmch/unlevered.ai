@@ -23,7 +23,7 @@ function Footer() {
                     <div></div>
                     {(
                         navigationsLinks.map((link, index) => (
-                            <button className="text-unlevered-textpurple rounded hover:text-gray-300 px-3 pt-2 pb-1">{link[0]}</button>
+                            <button key={index} className="text-unlevered-textpurple rounded hover:text-gray-300 px-3 pt-2 pb-1">{link[0]}</button>
                         )
                         )
                     )}
