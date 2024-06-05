@@ -4,6 +4,7 @@
 
 body {
   max-width: 1920px;
+  min-width: 750px;
   margin: 0 auto !important;
   float: none !important;
   --tw-bg-opacity: 1;
