@@ -17,7 +17,7 @@ function HomePage() {
     };
 
     useEffect(() => {
-        axios.get('http://localhost:3001/financials')
+        axios.get('http://76.154.163.8:3001/financials')
             .then((response) => {
                 setStockKeyRatios(response.data);
             })
@@ -25,7 +25,7 @@ function HomePage() {
                 console.error('Error fetching data: ', error);
             });
 
-        axios.get('http://localhost:3001/forecasts')
+        axios.get('http://76.154.163.8:3001/forecasts')
             .then((response) => {
                 setstockAnalystEstimates(response.data);
             })

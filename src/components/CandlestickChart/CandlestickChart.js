@@ -6,7 +6,7 @@ function CandlestickChart({ stockFrequency, stockName }) {
     const [chartData, setChartData] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/stockdata?frequency=${stockFrequency}`)
+        axios.get(`http://76.154.163.8:3001/stockdata?frequency=${stockFrequency}`)
             .then((response) => {
                 const data = response.data[`Time Series (${stockFrequency})`];
                 const formattedData = Object.keys(data).map(date => ({
