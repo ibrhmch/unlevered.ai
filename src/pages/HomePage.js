@@ -35,6 +35,29 @@ function HomePage() {
 
     }, [stockFrequency]);
 
+    useEffect(() => {
+        const handleTouchStart = (e) => {
+            e.preventDefault();
+            document.body.classList.add('no-scroll');
+            document.body.classList.add('no-select');
+        };
+
+        const handleTouchEnd = (e) => {
+            e.preventDefault();
+            document.body.classList.remove('no-scroll');
+            document.body.classList.remove('no-select');
+        };
+
+        const parentDiv = document.getElementById('chart-container');
+        parentDiv.addEventListener('touchstart', handleTouchStart);
+        parentDiv.addEventListener('touchend', handleTouchEnd);
+
+        return () => {
+            parentDiv.removeEventListener('touchstart', handleTouchStart);
+            parentDiv.removeEventListener('touchend', handleTouchEnd);
+        };
+    }, []);
+
     // Dummy data for now
     const dummyStockData = {
         name: 'Apple Inc.',
@@ -56,7 +79,7 @@ function HomePage() {
                     <div className="flex justify-center mb-6">
                         <FrequencyButtons stockFrequency={stockFrequency} changeStockFrequency={changeStockFrequency} />
                     </div>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center" id="chart-container">
                         <CandlestickChart stockFrequency={stockFrequency} stockName={stockName} />
                     </div>
                 </div>

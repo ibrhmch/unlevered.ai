@@ -10,3 +10,17 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(7 4 21 / var(--tw-bg-opacity));
 }
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+}
+
+.no-scroll {
+  overflow: hidden;
+}

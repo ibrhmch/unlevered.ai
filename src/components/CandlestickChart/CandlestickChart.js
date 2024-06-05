@@ -4,7 +4,6 @@ import Chart from 'react-apexcharts';
 
 function CandlestickChart({ stockFrequency, stockName }) {
     const [chartData, setChartData] = useState([]);
-    const [isDataLoaded, setIsDataLoaded] = useState(false); // Add a state to track data loading
 
     useEffect(() => {
         axios.get(`http://76.154.163.8:3001/stockdata?frequency=${stockFrequency}`)
@@ -20,7 +19,6 @@ function CandlestickChart({ stockFrequency, stockName }) {
                     ]
                 }));
                 setChartData(formattedData);
-                setIsDataLoaded(true); // Set data as loaded
             })
             .catch((error) => {
                 console.error('Error fetching data: ', error);
@@ -106,10 +104,6 @@ function CandlestickChart({ stockFrequency, stockName }) {
     const series = [{
         data: chartData
     }];
-
-    if (!isDataLoaded) {
-        return <div>Loading...</div>; // Show a loading state until data is loaded
-    }
 
     return (
         <div id="chart" className='font-extralight bg-graph-background mx-1 p-1 w-full lg:w-10/12'>
