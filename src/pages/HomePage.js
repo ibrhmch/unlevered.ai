@@ -75,7 +75,7 @@ function HomePage() {
                 changePercent={dummyStockData.changePercent}
             />
             <div className="pt-2 pb-2 flex justify-center text-sm">
-                <div className="flex flex-col py-4 w-full mx-1 lg:w-4/6 rounded-md bg-graph-background">
+                <div className="flex flex-col py-4 w-full mx-1 lg:w-10/12 rounded-md bg-graph-background">
                     <div className="flex justify-center mb-6">
                         <FrequencyButtons stockFrequency={stockFrequency} changeStockFrequency={changeStockFrequency} />
                     </div>

@@ -106,7 +106,7 @@ function CandlestickChart({ stockFrequency, stockName }) {
     }];
 
     return (
-        <div id="chart" className='font-extralight bg-graph-background mx-1 p-1 w-full lg:w-10/12'>
+        <div id="chart" className='font-extralight bg-graph-background mx-1 py-1 md:px-4 w-full'>
             <Chart options={options} series={series} type="candlestick" height={450} />
         </div>
     );
