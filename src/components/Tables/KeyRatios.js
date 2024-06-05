@@ -80,12 +80,11 @@ function KeyRatios({ stockKeyRatios }) {
 
     return (
         <div className="p-1 bg-gray-800 border rounded-md border-transparent">
-
             <div className="flex items-center justify-center border-b border-gray-700">
                 <h2 className="text-md font-medium mb-2">Key Ratios</h2>
             </div>
-            <table className="min-w-full text-xs">
-                <tbody className="text-xs">
+            <table className="">
+                <tbody className="">
                     {renderTableRows()}
                 </tbody>
             </table>

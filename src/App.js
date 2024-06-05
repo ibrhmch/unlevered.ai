@@ -5,7 +5,7 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className="flex-col" style={{ minHeight: '100vh', color: 'white' }}>
+    <div className='w-fit m-auto' style={{ minHeight: '100vh', color: 'white' }}>
       <NavBar />
       <HomePage />
       <Footer />

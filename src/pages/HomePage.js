@@ -67,7 +67,7 @@ function HomePage() {
     };
 
     return (
-        <div className="min-h-screen text-gray-300 font-light mt-20 w-full">
+        <div className="m-auto min-h-screen text-gray-300 font-light mt-20 w-fit">
             <StockOverview
                 name={dummyStockData.name}
                 price={dummyStockData.price}
@@ -84,8 +84,8 @@ function HomePage() {
                     </div>
                 </div>
             </div>
-            <div className="pt-2 pb-2 flex justify-center text-sm">
-                <div className="w-full lg:w-4/6 flex justify-center items-center">
+            <div className="pt-2 pb-2 flex justify-center text-xs">
+                <div className="flex justify-center items-center">
                     <KeyRatios stockKeyRatios={stockKeyRatios} />
                 </div>
             </div>
